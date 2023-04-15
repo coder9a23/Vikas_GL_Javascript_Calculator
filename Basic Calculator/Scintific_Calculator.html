@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scintific Calculator</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0;
+            border: 0;
+            color: white;
+        }
+        .container{
+            max-width: 400px;
+            margin: 10vh auto 0 auto;
+            box-shadow: 0px 0px 43px 17px rgb(153, 153, 153, 1);
+            border-radius: 10px;
+        }
+        #display{
+            height: 70px;
+            text-align: right;
+            line-height: 70px;
+            padding: 16px 8px;
+            font-size: 25px;
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;  /*Here 1fr is fraction*/
+        }
+        .button{
+            background-color: rgb(46, 45, 45);
+            border: 0.5px solid grey;
+            line-height: 75px;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+        }
+        #equal{
+            background-color: orangered;
+            color: white;
+        }
+        .button:hover{
+            background-color: rgb(85, 85, 255);
+            color: rgb(0, 0, 0);
+            transition: 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <section>  
+        <div class="container">
+            <div id="display"></div>
+            <div class="buttons">
+                <div class="button" onclick="clearContent()" >Clear</div>
+                <div class="button" onclick="addChar('(')">(</div>
+                <div class="button" onclick="addChar(')')">)</div>
+                <div class="button" onclick="deleteChar()"><=</div>
+
+                <div class="button" onclick="changeSign()">+/-</div>
+                <div class="button" onclick="addChar('7')">7</div>
+                <div class="button" onclick="addChar('8')">8</div>
+                <div class="button" onclick="addChar('9')">9</div>
+                <div class="button" onclick="addChar('/')">/</div>
+
+                <div class="button" onclick="addChar('4')">4</div>
+                <div class="button" onclick="addChar('5')">5</div>
+                <div class="button" onclick="addChar('6')">6</div>
+
+                <div class="button" onclick="addChar('*')">*</div>
+                <div class="button" onclick="addChar('1')">1</div>
+                <div class="button" onclick="addChar('2')">2</div>
+                <div class="button" onclick="addChar('3')">3</div>
+
+                <div class="button" onclick="addChar('+')">+</div>
+                <div class="button" onclick="addChar('0')">0</div>
+                <div class="button" onclick="addChar('.')">.</div>
+                <div class="button" onclick="if(chekNumber()){compute()}" >enter</div>
+
+
+                <div class="button" onclick="addChar('-')">-</div>
+                <div class="button" onclick="squareRut()">sqrt</div>
+                <div class="button" onclick="if(chekNumber()){square()}">sq</div>
+                <div class="button" onclick="if(chekNumber()){ex()}">exp</div>
+                <div class="button" onclick="if(chekNumber()){ln()}">ln</div>
+                <div class="button" onclick="if(chekNumber() == true){sin()}">sin</div>
+                <div class="button" onclick="if(chekNumber() == true){cos()}">cos</div>
+                <div class="button" onclick="if(chekNumber() == true){tan()}">tan</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <script src="Scintific_index.js"></script>
+</body>
+</html>
